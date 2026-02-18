@@ -143,7 +143,7 @@ Click on a script name to see what it does.
 <details>
 <summary><strong>Smart Image Joiner (JOINVERT.bat)</strong></summary>
 
-* **What it does:** Stitches multiple images together cleanly through a very caveman-like way (the only way i was able to make it work with bat files).
+* **What it does:** Stitches multiple images together cleanly through a very caveman-like way (the only way i was able to make it work with bat files). Calling joinvert.ps1 and joinvert_real.bat
 * **Usage:** Select multiple images -> Send to script.
     * Asks if you want to join them Vertically (Tall) or Horizontally (Wide).
     * Automatically resizes width/height to match the largest image.
