@@ -198,7 +198,8 @@ This is how I use them. It allows for a cleaner menu with custom icons (included
 6.  Save changes.
 
 ![My Custom Context Menu](mymenu.png)
-*(This is how my setup looks using the icons included in the repo)*
+
+*(This is how my setup looks using the icons included in the pack)*
 
 ### Method 2: "SendTo" Folder (Native)
 1.  Press `Win + R` and type `shell:sendto`.
