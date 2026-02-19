@@ -224,7 +224,7 @@ This is how I use them. It allows for a cleaner menu with custom icons (included
 5.  I leave the silent scripts outside the submenu for quicker access (VID2x264.bat,extract320.bat on files, paste2file.bat on explorer)
 6.  Save changes.
 
-![My Custom Context Menu](mymenu.png)
+![My Custom Context Menu](icons/mymenu.png)
 
 *(This is how my setup looks using the icons included in the pack)*
 
