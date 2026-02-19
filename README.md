@@ -17,10 +17,12 @@ I made these to use with my **Right Click Menu** (Context Menu), but they work j
 * **EXTRACT320:** One-click extraction to MP3 320kbps (No UI).
 * **CONV4AUDIO:** Smart converter (MP3, Opus, FLAC).
 * **SONG2VID:** Create a video from an audio file (uses embedded art or local images).
+* **GAIN4SONG:** Permanently applies ReplayGain volume adjustments directly to the audio stream.
 
 ### 🎥 Video
 * **VID2x264:** One click converter to H.264/AAC. WhatsApp friendly (No UI).
 * **CONV4VID:** Multi-format video converter (MP4, WebM) with resolution resizing.
+* **VIDEMUX:** Universal demuxer to extract audio, video, subtitles, and fonts from MKV/MP4 files.
 * **HARDSUB4VID:** Burn subtitles (SRT/ASS) into video.
 * **VID2GIFWEBP:** Create optimized GIFs or WebPs from video.
 * **FRAMES4ALL:** Extract frames from video or explode GIFs/WebPs.
@@ -33,6 +35,7 @@ I made these to use with my **Right Click Menu** (Context Menu), but they work j
 * **PASTE2FILE:** Instantly saves your clipboard text to a timestamped `.txt` file.
 * **OCRPDF:** Add searchable text layers to PDFs (requires Python).
 * **COMIC2PDF:** Convert CBZ/CBR to PDF (and vice-versa).
+* **UPDATER:** Native self-updater that fetches and installs the latest version of this suite directly from GitHub.
 
 ---
 
@@ -93,6 +96,14 @@ Click on a script name to see what it does.
     4.  Falls back to a default image (comes in the package).
 </details>
 
+<details>
+<summary><strong>Permanent ReplayGain Applicator (GAIN2SONG.bat)</strong></summary>
+
+* **What it does:** Normal audio players read ReplayGain tags to adjust volume on the fly. This script reads those tags and *permanently* burns that volume adjustment into the audio file itself (useful for dumb players, car stereos, or video editors that ignore ReplayGain tags).
+* **Usage:** Send audio files. By default, it automatically applies the TRACK gain without asking.
+* **Pro-tip:** If you open the `.bat` file with a text editor and change `AUTO_START_TRACK=1` to `0`, it will show a menu allowing you to choose Album Gain or Auto-Normalize (EBU R128) for files that have no tags.
+</details>
+
 ### 🎥 Video Tools
 <details>
 <summary><strong>Quick Video Converter (VID2x264.bat)</strong></summary>
@@ -109,10 +120,11 @@ Click on a script name to see what it does.
 </details>
 
 <details>
-<summary><strong>Frame Extractor (FRAMES4ALL.bat)</strong></summary>
+<summary><strong>Universal Demuxer (VIDEMUX.bat)</strong></summary>
 
-* **What it does:** Dumps every frame of a video/gif into a folder.
-* **Usage:** Send file. It handles GIF coalescing automatically (so frames aren't garbled).
+* **What it does:** Extracts (demuxes) the individual streams from a video container without re-encoding. 
+* **Usage:** Send a video file (MKV/MP4). A menu will ask if you want to extract *Everything* (Raw Video stream, all Audio tracks, all Subtitles, and attached Fonts) or *Just Subtitles/Fonts* (super handy for quickly grabbing subs).
+* **Output:** Creates a neatly organized folder right next to your source file containing all the extracted tracks.
 </details>
 
 <details>
@@ -123,6 +135,13 @@ Click on a script name to see what it does.
     * It automatically looks for a matching `.srt` or `.ass` file.
     * If none found, it scans for internal subtitle tracks.
     * Lets you choose font styles (Cinema Yellow, Simple White, Custom).
+</details>
+
+<details>
+<summary><strong>Frame Extractor (FRAMES4ALL.bat)</strong></summary>
+
+* **What it does:** Dumps every frame of a video/gif into a folder.
+* **Usage:** Send file. It handles GIF coalescing automatically (so frames aren't garbled).
 </details>
 
 <details>
@@ -172,6 +191,14 @@ Click on a script name to see what it does.
 * **Usage:** Send file. It automatically detects direction (Archive -> PDF or PDF -> Archive).
 </details>
 
+<details>
+<summary><strong>Suite Updater (UPDATER.bat)</strong></summary>
+
+* **What it does:** Automatically checks the GitHub repository for a newer version of Zhiro QuickTools. If an update is found, it downloads and replaces your local files automatically.
+* **Usage:** Just double-click it (no drag-and-drop needed). It uses native Windows tools (`curl` and `tar`), so it requires zero setup.
+* **Note:** This requires the `version.txt` file to be present in your folder to know which version you are currently running. If you modified a script, back it up before updating!
+</details>
+
 ---
 
 ## 📦 Requirements
@@ -212,10 +239,16 @@ This is how I use them. It allows for a cleaner menu with custom icons (included
 
 * **Simple Muxer:** A tool to quickly mux audio and video streams together.
 * **Frames2Vid:** The inverse of FRAMES4ALL (reconstruct a video file from a folder of images).
-* **Self-Updater:** A native way to update the suite directly from a script without re-downloading the zip.
-  
+
 ## 🔄 Updating
-Just download the new version and replace the `.bat` files in your tools folder.
+
+You have two ways to keep your tools up to date:
+
+* **Automatic (Recommended):** Just run `UPDATER.bat`. The script will check GitHub, download the latest files, and replace them automatically. If you modified a script, back it up before updating!
+* **Manual:** Download the latest ZIP from the [Releases](https://github.com/Zhiro90/bat-zhiro-quicktools/releases) page and overwrite the files in your installation folder.
+
+> [!IMPORTANT]
+> Do not delete the `version.txt` file, as it is required for the Updater to know when a new version is available.
 
 ---
 *Made for personal use, shared for convenience.*
