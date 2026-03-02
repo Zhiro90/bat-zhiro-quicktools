@@ -1,10 +1,10 @@
 # 🛠️ Zhiro QuickTools
+[![Download](https://img.shields.io/github/v/release/Zhiro90/bat-zhiro-quicktools?style=for-the-badge&label=DOWNLOAD&color=232323&logo=windows-terminal)](https://github.com/Zhiro90/bat-zhiro-quicktools/releases/latest) [![Downloads](https://img.shields.io/github/downloads/Zhiro90/bat-zhiro-quicktools/total?style=for-the-badge&color=2b5b84)](https://github.com/Zhiro90/bat-zhiro-quicktools/releases) [![Documentation](https://img.shields.io/badge/Documentation-Blogspot-b35c1e?style=for-the-badge&logo=blogger)](http://zhirominoda.blogspot.com)
+[![License](https://img.shields.io/github/license/Zhiro90/bat-zhiro-quicktools?style=for-the-badge&color=3a7a40)](https://github.com/Zhiro90/bat-zhiro-quicktools/blob/main/LICENSE) 
 
 A bunch of `.bat` scripts to handle mundane, repetitive media tasks (conversions, trimming, captioning, etc.) with a single click.
 
 I made these to use with my **Right Click Menu** (Context Menu), but they work just as well via the Windows **SendTo** folder. No fancy GUIs, just drag, drop, and done.
-
-[![Download](https://img.shields.io/github/v/release/Zhiro90/bat-zhiro-quicktools?style=for-the-badge&label=DOWNLOAD&color=232323&logo=windows)](https://github.com/Zhiro90/bat-zhiro-quicktools/releases/latest)
 
 ## ⚡ The Quick List
 
